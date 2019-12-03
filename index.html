@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <title>Dark Mode : Javascript Bookmark</title>
+    <title>Dark Mode : Javascript Bookmarklet</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="favicon.png" />
 </head>
 <body>
     <div class="grid-2">
         <div class="section-1">
             <span class="emoj">🌓</span>
             <h2>Dark Mode</h2>
-            <p>Javascript Bookmark</p>
+            <p>Javascript Bookmarklet</p>
             <a href="https://github.com/sanketmehta7" target="_blank"><i class="fab fa-github"></i></a>
             <!-- Place this tag where you want the button to render. -->
             <a class="github-button" href="https://github.com/sanketmehta7/DarkMode-JS-BookMark" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star sanketmehta7/DarkMode-JS-BookMark on GitHub">Star</a>
@@ -46,7 +49,7 @@
             </script>
         </div>
         <div class="section-2">
-            <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>DarkMode : Add Book Mark</a>
+            <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>DarkMode : Bookmarklet - Drag</a>
             <h2>About</h2>
             <p>Convert most website to Dark Mode using just book mark. <span class="dragme">Drag Above Button To Bookmark bar.</span> Select this bookmark on any website to change it to dark mode.
                 <note>*Some Browsers Don't Support JS Bookmarks.</note>
