@@ -18,7 +18,12 @@ body{
 h2,.white{
     color: #fff;
 }
-
+note{
+    display: block;
+    font-size: 0.7rem;
+    color: #444;
+    line-height: 1rem;
+}
 a{
     color: #7A7C80;
     text-decoration: none;
@@ -47,7 +52,7 @@ a{
 }
 /* section 2 */
 .section-2{
-    padding-top: 20vh;
+    padding-top: 10vh;
     width: 70%;
 }
 
@@ -87,7 +92,16 @@ a{
     position: relative;
     padding-left: 10px;
 }
-
+.section-2 .bmark{
+    width: 70%;
+    font-size: 1.5rem;
+    color: #101314;
+    background: orange;
+    text-align: center;
+    border-radius: 0.3vw;
+    padding: 0.5vw;
+    font-weight: bold;
+}
 /* media queres */
 @media(max-width:780px){
     .grid-2{
