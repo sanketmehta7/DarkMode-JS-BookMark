@@ -17,7 +17,7 @@
             <a href="https://github.com/sanketmehta7" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div class="section-2">
-            <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);""==o.style.backgroundColor&&(o.style.backgroundColor=invert(t.backgroundColor,"back"),o.attributes.invTouch="true"),""==o.style.color&&(o.style.color=invert(t.color,"color"),o.attributes.invTouch="true")});})();'>Add Book Mark</a>
+            <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>Add Book Mark</a>
             <h2>About</h2>
             <p>Convert most website to Dark Mode using just book mark. Right click above button and select "Add Link to Bookmark". Select this bookmark on any website to change it to dark mode.
                 <note>*Latest Chrome Don't Support JS Bookmarks.</note>
@@ -27,7 +27,7 @@
                 <div class="tit">Bookmark code to add manually:</div>
                 <code>
                     <br/>
-                    javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);""==o.style.backgroundColor&&(o.style.backgroundColor=invert(t.backgroundColor,"back"),o.attributes.invTouch="true"),""==o.style.color&&(o.style.color=invert(t.color,"color"),o.attributes.invTouch="true")});})();
+                    javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();
                 </code>
                 <br/>
                 <br/>
@@ -53,14 +53,9 @@ function invert(str,type){
 //invert color and backgroundcolor of every dom node
 document.querySelectorAll('*:not([invTouch])').forEach(function(node) {
     var style  = window.getComputedStyle(node);
-    if(node.style.backgroundColor==""){
-        node.style.backgroundColor = invert(style.backgroundColor,"back");
-        node.attributes['invTouch'] = 'true';
-    }
-    if(node.style.color==""){
-        node.style.color = invert(style.color,"color");
-        node.attributes['invTouch'] = 'true';
-    }
+    node.style.backgroundColor = invert(style.backgroundColor,"back");
+    node.style.color = invert(style.color,"color");
+    node.setAttribute("invTouch", "true");
 });
                 </pre>
 
