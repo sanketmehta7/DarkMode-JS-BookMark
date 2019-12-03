@@ -31,6 +31,9 @@ note{
     font-size: 1.6rem;
     font-family: monospace;
 }
+.emoj{
+    font-size: 82px;
+}
 .codeB{
     padding: 0.3vw;
     background: #333;
