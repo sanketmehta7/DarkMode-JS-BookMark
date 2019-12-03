@@ -17,23 +17,23 @@
             <a href="https://github.com/sanketmehta7" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div class="section-2">
-            <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>Add Book Mark</a>
+            <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>DarkMode : Add Book Mark</a>
             <h2>About</h2>
-            <p>Convert most website to Dark Mode using just book mark. Right click above button and select "Add Link to Bookmark". Select this bookmark on any website to change it to dark mode.
-                <note>*Latest Chrome Don't Support JS Bookmarks.</note>
+            <p>Convert most website to Dark Mode using just book mark. <span class="dragme">Drag Above Button To Bookmark bar.</span> Select this bookmark on any website to change it to dark mode.
+                <note>*Some Browsers Don't Support JS Bookmarks.</note>
             </p>
             <h2>Code</h2>
             <p class="code">
-                <div class="tit">Bookmark code to add manually:</div>
-                <code>
-                    <br/>
+                <div class="tit">Copy & Add manually:</div>
+                <br/>
+                <div class="codeB">
                     javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();
-                </code>
+                </div>
                 <br/>
                 <br/>
                 <hr/>
                 <div class="tit">Exact code</div>
-                <pre>
+                <pre class="hidden">
 //invert color and skip transparency value
 function invert(str,type){
   var t1 = str.split("(");

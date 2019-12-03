@@ -24,6 +24,21 @@ note{
     color: #444;
     line-height: 1rem;
 }
+.dragme{
+    font-style: italic;
+    font-weight: 100;
+    color: #8089ff;
+    font-size: 1.6rem;
+    font-family: monospace;
+}
+.codeB{
+    padding: 0.3vw;
+    background: #333;
+    border-radius: 0.1vw;
+    font-family: monospace;
+    white-space: normal;
+    word-break: break-word;
+}
 a{
     color: #7A7C80;
     text-decoration: none;
@@ -52,7 +67,7 @@ a{
 }
 /* section 2 */
 .section-2{
-    padding-top: 10vh;
+    padding-top: 5vh;
     width: 70%;
 }
 
@@ -104,6 +119,9 @@ a{
 }
 /* media queres */
 @media(max-width:780px){
+    .section-2 .bmark{
+        width: 100%;
+    }
     .grid-2{
         grid-template-columns: 1fr;
     }
@@ -115,5 +133,6 @@ a{
         padding: 0;
         padding-left: 1.5rem;
         padding-top: 2rem;
+        width: 90%;
     }
 }
