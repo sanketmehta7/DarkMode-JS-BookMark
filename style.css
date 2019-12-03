@@ -3,7 +3,7 @@
 
 .grid-2{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr;
 }
 
 body{
@@ -46,7 +46,6 @@ a{
 /* section 1 */
 .section-1{
     padding-top: 40vh;
-    padding-left: 20vw;
     text-align: center;
 }
 
@@ -68,7 +67,7 @@ a{
 /* section 2 */
 .section-2{
     padding-top: 5vh;
-    width: 70%;
+    width: 85%;
 }
 
 .section-2 h2{
