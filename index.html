@@ -19,6 +19,31 @@
             <a href="https://github.com/sanketmehta7" target="_blank"><i class="fab fa-github"></i></a>
             <!-- Place this tag where you want the button to render. -->
             <a class="github-button" href="https://github.com/sanketmehta7/DarkMode-JS-BookMark" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star sanketmehta7/DarkMode-JS-BookMark on GitHub">Star</a>
+            <div class="ytBox">
+                <div class="ytplayer">
+                    <div id="ytplayer"></div>
+                </div>
+            </div>
+            <script>
+              // Load the IFrame Player API code asynchronously.
+              var tag = document.createElement('script');
+              tag.src = "https://www.youtube.com/player_api";
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+              // Replace the 'ytplayer' element with an <iframe> and
+              // YouTube player after the API code downloads.
+              var player;
+              function onYouTubePlayerAPIReady() {
+                player = new YT.Player('ytplayer', {
+                  height: '200',
+                  width: '355',
+                  videoId: 'sOXiF-uXi1E',
+                  controls:0 ,
+                  showinfo:0
+                });
+              }
+            </script>
         </div>
         <div class="section-2">
             <a class="bmark" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>DarkMode : Add Book Mark</a>
