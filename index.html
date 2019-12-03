@@ -27,7 +27,7 @@
                 <div class="tit">Bookmark code to add manually:</div>
                 <code>
                     <br/>
-                    javascript:(function(){function inv(o){var n=o.split("("),r=n[1].split(")")[0].split(",");return r.forEach(function(o,n){n<3&&(r[n]=255-parseInt(o))}),r=r.join(","),n[0]+"("+r+")"}document.querySelectorAll("*").forEach(function(o){var n=window.getComputedStyle(o);o.style.backgroundColor=inv(n.backgroundColor),o.style.color=inv(n.color)});})();
+                    javascript:(function(){function invert(o,r){var t=o.split("("),n=t[1].split(")")[0].split(",");return n.forEach(function(o,t){t<3&&(n[t]="color"==r&&255-parseInt(o)<50?70:255-parseInt(o))}),n=n.join(","),t[0]+"("+n+")"}document.querySelectorAll("*").forEach(function(o){var r=window.getComputedStyle(o);o.style.backgroundColor=invert(r.backgroundColor,"back"),o.style.color=invert(r.color,"color")});})();
                 </code>
                 <br/>
                 <br/>
@@ -35,13 +35,16 @@
                 <div class="tit">Exact code</div>
                 <pre>
 //invert color and skip transparency value
-function invert(str){
+function invert(str,type){
   var t1 = str.split("(");
   var t2 = t1[1].split(")");
   var t3 = t2[0].split(",");
   t3.forEach(function(v,i){
    if(i<3){
-    t3[i] = 255 - parseInt(v);
+    if(type=="color")
+        t3[i] = (255 - parseInt(v))<50?70:(255 - parseInt(v));
+    else
+        t3[i] = (255 - parseInt(v));
    }
   })
   t3 = t3.join(",");
@@ -50,8 +53,8 @@ function invert(str){
 //invert color and backgroundcolor of every dom node
 document.querySelectorAll('*').forEach(function(node) {
     var style  = window.getComputedStyle(node);
-    node.style.backgroundColor = invert(style.backgroundColor);
-   node.style.color = invert(style.color);
+    node.style.backgroundColor = invert(style.backgroundColor,"back");
+   node.style.color = invert(style.color,"color");
 });
                 </pre>
 
