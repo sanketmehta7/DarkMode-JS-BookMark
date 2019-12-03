@@ -17,7 +17,7 @@
             <a href="https://github.com/sanketmehta7" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div class="section-2">
-            <a class="bmark" href='javascript:(function(){function invert(o,r){var t=o.split("("),l=t[1].split(")")[0].split(",");return l.forEach(function(o,t){t<3&&(l[t]="color"==r&&255-parseInt(o)<50?120:255-parseInt(o))}),l=l.join(","),t[0]+"("+l+")"}document.querySelectorAll("*").forEach(function(o){var r=window.getComputedStyle(o);""==o.style.backgroundColor&&(o.style.backgroundColor=invert(r.backgroundColor,"back")),""==o.style.color&&(o.style.color=invert(r.color,"color"))});})();'>Add Book Mark</a>
+            <a class="bmark" href='javascript:(function(){function invert(o,r){var t=o.split("("),l=t[1].split(")")[0].split(",");return l.forEach(function(o,t){t<3&&(l[t]="color"==r&&255-parseInt(o)<50?120:255-parseInt(o))}),l=l.join(","),t[0]+"("+l+")"}document.querySelectorAll("*:not([style])").forEach(function(o){var r=window.getComputedStyle(o);""==o.style.backgroundColor&&(o.style.backgroundColor=invert(r.backgroundColor,"back")),""==o.style.color&&(o.style.color=invert(r.color,"color"))});})();'>Add Book Mark</a>
             <h2>About</h2>
             <p>Convert most website to Dark Mode using just book mark. Right click above button and select "Add Link to Bookmark". Select this bookmark on any website to change it to dark mode.
                 <note>*Latest Chrome Don't Support JS Bookmarks.</note>
@@ -27,7 +27,7 @@
                 <div class="tit">Bookmark code to add manually:</div>
                 <code>
                     <br/>
-                    javascript:(function(){function invert(o,r){var t=o.split("("),l=t[1].split(")")[0].split(",");return l.forEach(function(o,t){t<3&&(l[t]="color"==r&&255-parseInt(o)<50?120:255-parseInt(o))}),l=l.join(","),t[0]+"("+l+")"}document.querySelectorAll("*").forEach(function(o){var r=window.getComputedStyle(o);""==o.style.backgroundColor&&(o.style.backgroundColor=invert(r.backgroundColor,"back")),""==o.style.color&&(o.style.color=invert(r.color,"color"))});})();
+                    javascript:(function(){function invert(o,r){var t=o.split("("),l=t[1].split(")")[0].split(",");return l.forEach(function(o,t){t<3&&(l[t]="color"==r&&255-parseInt(o)<50?120:255-parseInt(o))}),l=l.join(","),t[0]+"("+l+")"}document.querySelectorAll("*:not([style])").forEach(function(o){var r=window.getComputedStyle(o);""==o.style.backgroundColor&&(o.style.backgroundColor=invert(r.backgroundColor,"back")),""==o.style.color&&(o.style.color=invert(r.color,"color"))});})();
                 </code>
                 <br/>
                 <br/>
@@ -51,7 +51,7 @@ function invert(str,type){
   return t1[0]+"("+t3+")";
 }
 //invert color and backgroundcolor of every dom node
-document.querySelectorAll('*').forEach(function(node) {
+document.querySelectorAll('*:not([style])').forEach(function(node) {
     var style  = window.getComputedStyle(node);
     if(node.style.backgroundColor=="")
         node.style.backgroundColor = invert(style.backgroundColor,"back");
