@@ -17,7 +17,7 @@
             <a href="https://github.com/sanketmehta7" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div class="section-2">
-            <a class="bmark" href='javascript:(function(){function inv(o){var n=o.split("("),r=n[1].split(")")[0].split(",");return r.forEach(function(o,n){n<3&&(r[n]=255-parseInt(o))}),r=r.join(","),n[0]+"("+r+")"}document.querySelectorAll("*").forEach(function(o){var n=window.getComputedStyle(o);o.style.backgroundColor=inv(n.backgroundColor),o.style.color=inv(n.color)});})();'>Add Book Mark</a>
+            <a class="bmark" href='javascript:(function(){function invert(o,r){var t=o.split("("),n=t[1].split(")")[0].split(",");return n.forEach(function(o,t){t<3&&(n[t]="color"==r&&255-parseInt(o)<50?70:255-parseInt(o))}),n=n.join(","),t[0]+"("+n+")"}document.querySelectorAll("*").forEach(function(o){var r=window.getComputedStyle(o);o.style.backgroundColor=invert(r.backgroundColor,"back"),o.style.color=invert(r.color,"color")});})();'>Add Book Mark</a>
             <h2>About</h2>
             <p>Convert most website to Dark Mode using just book mark. Right click above button and select "Add Link to Bookmark". Select this bookmark on any website to change it to dark mode.
                 <note>*Latest Chrome Don't Support JS Bookmarks.</note>
